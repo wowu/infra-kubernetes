@@ -1,0 +1,18 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: karol-date-rs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karol-date
+  template:
+    metadata:
+      labels:
+        app: karol-date
+    spec:
+      containers:
+      - name: date
+        image: pankarol/infra-date:latest
