@@ -2,16 +2,16 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: karol-date-rs
+  name: NAZWA-date-rs
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: karol-date
+      app: NAZWA-date
   template:
     metadata:
       labels:
-        app: karol-date
+        app: NAZWA-date
     spec:
       containers:
       - name: date

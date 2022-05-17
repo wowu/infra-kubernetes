@@ -3,7 +3,8 @@
 ## Instalacja
 
 1. Zainstaluj kubectl: [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/) &bull; [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) &bull; [macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
-2. Sprawdź czy posiadasz plik `~/.kube/config`:
+2. Sklonuj repozytorium: `git clone https://github.com/wowu/infra-kubernetes`
+3. Sprawdź czy posiadasz plik `~/.kube/config`:
    
    ```bash
    cat ~/.kube/config
@@ -14,7 +15,7 @@
    mv ~/.kube/config ~/.kube/config.bak
    ```
 
-3. Pobierz config naszego klastra:
+4. Pobierz config naszego klastra:
    
    ```bash
    mkdir -p ~/.kube
@@ -85,11 +86,11 @@
 
 ## Zadanie 2 - manifesty i ReplicaSet
 
-1. Zmieniamy `NAZWA` na naszą nazwę w pliku `zadanie_2/replicaset.yaml`.
+1. Zmieniamy `NAZWA` na naszą nazwę w pliku `zadanie-2/replicaset.yaml`.
 2. Tworzymy zasoby na klastrze:
    
     ```bash
-    kubectl apply -f zadanie_2/replicaset.yaml
+    kubectl apply -f zadanie-2/replicaset.yaml
     ```
 3. Listujemy ReplicaSety:
 
@@ -106,16 +107,16 @@
     kubectl get pods
     ```
 
-5. Zmieniamy liczbę replik na 2 w `zadanie_2/replicaset.yaml`.
+5. Zmieniamy liczbę replik na 2 w `zadanie-2/replicaset.yaml`.
 6. Aktualizujemy ReplicaSet:
    
     ```bash
-    kubectl apply -f zadanie_2/replicaset.yaml
+    kubectl apply -f zadanie-2/replicaset.yaml
     ```
 7. Usuwamy ReplicaSet:
    
     ```bash
-    kubectl delete -f zadanie_2/replicaset.yaml
+    kubectl delete -f zadanie-2/replicaset.yaml
     ```
 
 ## Zadanie 3 - deployment

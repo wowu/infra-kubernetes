@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo
+  name: NAZWA-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: NAZWA
   template:
     metadata:
       labels:
-        app: demo
+        app: NAZWA
     spec:
       containers:
         - image: containous/whoami
@@ -21,11 +21,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo
+  name: NAZWA-svc
 spec:
   type: ClusterIP
   selector:
-    app: demo
+    app: NAZWA
   ports:
     - name: http
       port: 80
@@ -34,16 +34,16 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: demo
+  name: NAZWA
 spec:
   rules:
-    - host: demo.142.132.240.13.nip.io
+    - host: NAZWA.k8s.musur.pl
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: demo
+                name: NAZWA-svc
                 port:
                   number: 80
