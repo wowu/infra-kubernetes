@@ -121,4 +121,10 @@
 
 ## Zadanie 3 - deployment
 
-1. 
+1. Zmieniamy `NAZWA` na naszą nazwę w pliku `zadanie-3/deployment.yaml`.
+2. Tworzymy zasoby na klastrze:
+   
+    ```bash
+    kubectl apply -f zadanie-2/replicaset.yaml
+    ```
+3. Otwieramy NAZWA.k8s.musur.pl
