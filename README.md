@@ -1,8 +1,25 @@
 # BIT: Warsztaty z Kubernetesa (17.05.2022)
 
-Wymagania:
+## Instalacja
 
-- kubectl - Instalacja: [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/) &bull; [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) &bull; [macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+1. Zainstaluj kubectl: [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/) &bull; [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) &bull; [macOS](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+2. Sprawdź czy posiadasz plik `~/.kube/config`:
+   
+   ```bash
+   cat ~/.kube/config
+   ```
+   Jeśli plik istnieje to zrób backup:
+
+   ```bash
+   mv ~/.kube/config ~/.kube/config.bak
+   ```
+
+3. Pobierz config naszego klastra:
+   
+   ```bash
+   mkdir -p ~/.kube
+   curl <link-z-prezentacji> > ~/.kube/config
+   ```
 
 ## Zadanie 1 - podstawowe operacje na podach
 
@@ -68,7 +85,7 @@ Wymagania:
 
 ## Zadanie 2 - manifesty i ReplicaSet
 
-1. Zmieniamy `NAZWA` na naszą nazwę w pliku `zadanie_2/replicaset.yaml`/
+1. Zmieniamy `NAZWA` na naszą nazwę w pliku `zadanie_2/replicaset.yaml`.
 2. Tworzymy zasoby na klastrze:
    
     ```bash
@@ -101,4 +118,6 @@ Wymagania:
     kubectl delete -f zadanie_2/replicaset.yaml
     ```
 
-## Zadanie 3
+## Zadanie 3 - deployment
+
+1. 
