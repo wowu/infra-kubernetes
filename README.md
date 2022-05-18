@@ -125,6 +125,6 @@
 2. Tworzymy zasoby na klastrze:
    
     ```bash
-    kubectl apply -f zadanie-2/replicaset.yaml
+    kubectl apply -f zadanie-3/deployment.yaml
     ```
 3. Otwieramy NAZWA.k8s.musur.pl
